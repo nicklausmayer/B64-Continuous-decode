@@ -14,9 +14,9 @@ while "flag{" not in flag:
 print(flag)
 ```
 
-1. We import the base64 package, included with python since 2.4
+1. We import the base64 module, included with python since 2.4
 2. We open and read the file containing the flag, encoded in base64 repeatedly
-3. We use the base64 module, 'b64decode' function to decode the flag. Then we use the python decode function to decode the bytes returned from the b64decode function.
+3. We use the 'b64decode' function from the base64 module to decode the flag. Then we use the python decode function to decode the bytes returned from the b64decode function.
 	- You could also decode using ascii as well
 4. Then we begin a while loop to decode the flag until it returns a string that starts with "flag{"
 5. The flag only prints after the loop has completed
