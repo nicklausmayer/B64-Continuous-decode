@@ -24,14 +24,14 @@ print(flag)
 ---
 ### POC: 
 During NahamCon CTF 2024, for the challenge Base3200 we were given a file containing 79918301 characters.
-![[Linux 'wc' command snippet.png]]
+[Linux 'wc' command snippet.png](https://i.imgur.com/b3DPn4f.png)
 The name of the challenge gave away the fact that we would use a variation of a base encoding, so I attempted to decode using base64. First using the `base64 -d` bash command to ensure that it was encoded using base64. 
-![[Linux 'base64 -d' & cut command snippet.png]]
+[Linux 'base64 -d' & cut command snippet.png](https://i.imgur.com/YC9gO5f.png)
 Since the output of the decode was very long I used the `cut` command to decrease the output.
 Knowing that the flag is encoded in base64, most likely multiple times I tried to manually decode by copying and pasting `base64 -d`.
-![[Continued decoding.png]]
+[Continued decoding.png](https://i.imgur.com/2uqohqT.png)
 I could very well continue to pipe `base64 -d`, but instead I decided to write a python program to do the work for me.
-![[Retrieved flag.png]]
+[Retrieved flag.png](https://i.imgur.com/oEAOdHG.png)
 Boom! Now we have retrieved the decoded flag.
 
 <!--
